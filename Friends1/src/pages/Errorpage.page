@@ -1,0 +1,30 @@
+<apex:page standardcontroller="Lead" rendered="{!Lead.isDuplicate__c}" showheader="false" sidebar="false" >
+<html>
+<script type="text/javascript">
+
+spe=500;
+na=document.all.tags("blink");
+swi=1;
+bringBackBlinky();
+
+function bringBackBlinky() {
+
+if (swi == 1) {
+sho="visible";
+swi=0;
+}
+else {
+sho="hidden";
+swi=1;
+}
+
+for(i=0;i<na.length;i++) {
+na[i].style.visibility=sho;
+}
+
+setTimeout("bringBackBlinky()", spe);
+}
+
+</script>
+<font color="Red"><blink>You created a duplicate lead.</blink></font></html>
+</apex:page>

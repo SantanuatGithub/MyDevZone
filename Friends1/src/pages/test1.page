@@ -1,0 +1,12 @@
+<apex:page >
+
+
+
+  
+<a href="https://c.ap1.visual.force.com/apex/rss" title="Welcome to Novartis Animal Health">
+                    <img src="{!URLFOR($Resource.rss)}" width="17" height="17" border="0" alt="Welcome to Novartis Animal Health"  />
+                </a>
+
+  
+  
+  </apex:page>

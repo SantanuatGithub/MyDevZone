@@ -1,0 +1,18 @@
+<apex:page controller="ClsShowContact" tabStyle="Account" showHeader="false" sidebar="false">
+  <apex:form >
+      <apex:pageBlock id="pgblk">
+          <apex:pageBlockSection title="Search Contact">
+             <apex:inputText label="Name" value="{!conId}"/>
+             <apex:commandButton value="Search" action="{!queryContact}" reRender="pgblk,pgblksec2,pgblktbl" style="margin-left:-220px"/>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Contact Information" id="pgblksec2" rendered="{!showContactTable}" >
+              <apex:pageBlockTable value="{!conList}" var="con" id="pgblktbl">
+                  <apex:column value="{!con.Associate_Id__c}" title="Associate Id"/>
+                  <apex:column value="{!con.Lastname}" title="Name"/>
+                  <apex:column value="{!con.Department}" title="Department"/>
+                  <apex:column value="{!con.Phone}" title="Phone Number"/>
+              </apex:pageBlockTable>  
+          </apex:pageBlockSection>
+       </apex:pageBlock>  
+  </apex:form>
+</apex:page>

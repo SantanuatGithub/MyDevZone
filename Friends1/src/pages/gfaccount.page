@@ -1,0 +1,50 @@
+<apex:page showHeader="false" sidebar="false"  standardController="Account" extensions="gfaccountClass" recordSetVar="accounts">
+<div class="container">
+<c:GFHeader />
+    
+    <div class="mainMenu">
+        <ul>
+            <li><a href="/apex/myscreen">Home</a></li>
+            <li><a href="#" class="current">Account</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li ><a href="myaccount.html" >My Settings</a></li>
+            <li><a href="mydevicehome.html">My Devices</a></li>
+            <li><a href="#" >Products &amp; Services</a></li>
+            <li><a href="mywafers.html">My Wafers</a></li>
+            <li><a href="pdkdesigndocuments.html">PDK &amp; Design Documents</a></li>
+            <li><a href="#">Team Rooms</a></li>
+            <li><a href="#" class="noImage">Partner</a></li>
+        </ul>
+        
+    </div>
+    <div class="bodyContentContainer">
+        <!--log Out section starts here-->
+       <div class="testlogOutLinkContainer">
+           <apex:image url="{!URLFOR($Resource.myStyles,'myStyles/images/helpIcon.png')}"/> <a href="#">Help and Training</a> | <a href="#">Site Map</a> 
+            <!--<a href="#">Help and Training</a> | <a href="#">Site Map</a>-->
+        </div>
+        <!--log Out section ends here-->
+        
+        <!--Main body content section starts here-->
+         <apex:ListViews type="Account"/>
+        <!--Main body content section ends here-->
+        
+       
+ 
+   
+    
+    <!--Body content ends here-->
+    
+    <!--Footer starts here-->
+    <div class="footer">
+        <div class="copyrightInformation">Copyright © 2013 GLOBALFOUNDRIES INC. All rights reserved.</div>
+        <div class="footerLink">
+            <a href="#">Privacy Statement</a> 
+            <a href="#">Security Statement </a> 
+            <a href="#" class="noImage">Terms of Use </a>
+        </div>
+    </div></div>
+    <!--Footer ends here-->
+    
+  </div>
+</apex:page>

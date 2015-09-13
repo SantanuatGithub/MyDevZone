@@ -1,0 +1,16 @@
+<apex:page standardController="Account">
+<apex:form >
+<apex:pageBlock mode="Edit">
+    <apex:pageBlockSection >
+        <apex:pageBlockSectionItem >
+            <apex:outputPanel >
+                <div class="requiredInput">
+                    <div class="requiredBlock"></div>
+                    <apex:inputText value="{!account.name}"/>
+                </div>
+            </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

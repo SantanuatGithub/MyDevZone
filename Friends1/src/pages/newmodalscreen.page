@@ -1,0 +1,46 @@
+<apex:page controller="NewModalScreenController1">
+  <apex:form >
+        <apex:commandButton value="Show Pop up"  rerender="modalPanel"  oncomplete="close()" action="{!showModalScreen}"/>
+       
+ 
+       <apex:outputPanel id="modalPanel">
+        <apex:outputPanel styleClass="modalBackground" layout="block" rendered="{!displayModalScreen}"/>
+            <apex:outputPanel styleClass="imgoverModal" layout="block" rendered="{!displayModalScreen}">
+            <apex:image url="/img/loading32.gif" height="20px"/>
+             
+            </apex:outputPanel>
+            <apex:actionFunction action="{!closeModalScreen}" name="close" reRender="modalPanel"/>
+        </apex:outputPanel>
+        <apex:pageBlock mode="Edit">
+            <apex:pageBlockSection title="Testing">
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+ 
+    <style type="text/css">
+        .imgoverModal{
+            background-color: white;
+            border-width: 2px;
+            border-style: solid;
+            z-index: 9999;
+            left: 50%;
+            padding:10px;
+            position: absolute;
+            width: 500px;
+            top:100px;
+        }
+        .modalBackground{
+            background-color:black;
+            opacity: 0.20;
+            filter: alpha(opacity = 20);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 9998;
+        }
+
+    </style>
+</apex:page>

@@ -1,0 +1,82 @@
+<apex:page sidebar="false">
+
+    <apex:stylesheet value="{!URLFOR($Resource.NewStyles, 'HTML/css/style.css')}" id="stylesheet_location"/> 
+    <apex:includeScript value="{!URLFOR($Resource.NewStyles, 'HTML/js/jquery-1.5.2.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.NewStyles, 'HTML/js/leftmenu.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.NewStyles, 'HTML/js/scriptbreaker-multiple-accordion-1.js')}"/>
+   
+   <apex:form > 
+ <div id="wrapper">
+  <div id="container">
+    <div id="leftpanel">
+      <div id="leftmenu">
+        <h2 class="first">My Wafers Links</h2>
+        <ul id="side_menu" class="leftnav">
+          <li><a href="#">Orders</a>
+            <ul>
+              <li> <apex:commandLink value="Account Statement" onclick="OpenPage('mydeviceshome'); return false;" id="mydevicehomeLink" /></li>
+              <li> <a href="#">BackLog</a></li>
+              <li> <a href="#">Billing</a></li>
+              <li> <a href="#">Credit and Debit Note</a></li>
+              <li> <a href="#">Order Acknowledgement</a></li>
+              <li> <a href="#">ROM Blanket</a></li>
+              <li> <a href="#">NRE Invoice </a></li>
+              <li> <a href="#">Tax Invoice </a></li>
+              <li> <a href="#">Purchase Order Tracking</a></li>
+              <li> <a href="#">Custom Order Report </a></li>
+            </ul>
+          </li>
+          <li> <a href="#">Production</a>
+            <ul>
+              <li> <a href="#">Forecast Fab Cycle Time</a></li>
+              <li> <a href="#">Wafer Start </a></li>
+              <li><a href="#"> WIP Status </a></li>
+              <li> <a href="#">Fab Out Schedule</a></li>
+              <li> <a href="#">Finish Goods Report</a></li>
+              <li> <a href="#">Lot Control Table </a></li>
+              <li> <a href="#">Custom Mfg Report</a></li>
+              <li> <a href="#">Scrap Reports</a></li>
+              <li> <a href="#">Wafer Scrap</a></li>
+              <li> <a href="#">Lot History</a></li>
+              <li> <a href="#">Fab WIP</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Shipping</a>
+            <ul>
+              <li> <a href="#">Certificate of Compliance</a></li>
+              <li> <a href="#">On Time Delivery </a></li>
+              <li> <a href="#">Packaging List Report</a></li>
+              <li> <a href="#">Custom Shipment Report</a></li>
+              <li> <a href="#">Shipment Alert Report</a></li>
+              <li> <a href="#">Shipment Detail (unsort and sort) Report</a></li>
+              <li> <a href="#">Ship Alert (By Location)</a></li>
+            </ul>
+          </li>
+        </ul>
+        <h2 class="first">Associated Apps</h2>
+        <ul class="leftnav">
+          <li> <a href="#">Order Query</a></li>
+          <li> <a href="#">Production Query</a></li>
+          <li> <a href="#">Shipping Query</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+     <apex:image url="{!URLFOR($Resource.NewStyles,'HTML/images/header-icon.png')}" width="35px" height="35px" id="caption_image"/>
+     <apex:outputLabel value="Overview" id="label" style="vertical-align:bottom;font-size:18px;font-style:normal;position:absolute;padding-top:8px"/><br/>
+                     <hr color="#cbcbcb" size="1" width="100%"/>
+      <!--<h1>Overview</h1>-->
+      <p class="disc">Make your selection from the menu to left</p>
+      
+      <apex:image url="{!URLFOR($Resource.NewStyles,'HTML/images/banner.jpg')}" width="261px" height="265px" id="banner_image"/>
+      <h2>My Wafers</h2>
+      <p>This is a page that captures all logistical reports on Orders, Production and Shipping. </p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+</apex:form> 
+
+
+ 
+</apex:page>

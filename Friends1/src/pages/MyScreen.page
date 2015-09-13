@@ -1,0 +1,25 @@
+<apex:page showHeader="false" sidebar="false" controller="testJquery" >
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type = "text/javascript">
+<!--var j$ = jQuery.noConflict();-->
+$(document).ready(function(){
+$("#btn").click(function(){
+alert("Hi");
+});
+});
+</script>
+
+
+
+
+
+<apex:form >
+<apex:pageblock >
+<apex:inputText value="{!input1}" id="getfield"/>
+<apex:commandButton id="btn"  value="Click me"/>
+</apex:pageblock>
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,49 @@
+<apex:page standardController="Account" extensions="createrows" showHeader="false" sidebar="false" >
+<!--<script>
+    function cal1(x)
+    {
+        confirm('hi'+x);
+    }
+</script>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageblockSection >
+                <input type="Button" value="Test" onclick="cal1('5')"/>
+               
+            </apex:pageblockSection>
+            <apex:pageblockSection >
+                <apex:actionFunction Name="cal" action="{!cal}" />
+            </apex:pageblockSection>
+       </apex:pageBlock>
+    </apex:form>
+-->
+<apex:form >
+<apex:pageblock >
+<apex:pageblockSection id="pgb1">
+<apex:outputText >
+Given Amount: 
+<apex:inputText value="{!amount}" onblur="next()"/>
+<apex:actionFunction name="next" action="{!next}" />
+</apex:outputText>
+<apex:outputText >
+Total Amount: 
+<apex:inputText value="{!output}"/>
+</apex:outputText> 
+</apex:pageblockSection>
+
+</apex:pageblock>
+
+<apex:pageblock rendered="{!display}"  id="pgb2">
+<apex:pageblockSection >
+<apex:outputText >
+Initial Amount: 
+<apex:inputText value="{!input}" onblur="cal()"/>
+<apex:image height="20" width="20" value="/resource/1284013274000/Loader" rendered="{!displayLoader}" id="img"/>
+</apex:outputText>
+</apex:pageblockSection>
+<apex:actionFunction name="cal" action="{!calculate}" reRender="pgb1,img"/>
+</apex:pageblock>
+</apex:form>
+    
+    
+</apex:page>

@@ -1,0 +1,37 @@
+<apex:page standardController="Lead" showHeader="false" sidebar="false" extensions="Checking">
+  <!-- Begin Default Content REMOVE THIS -->
+    <apex:sectionHeader title="Lead Edit " subtitle="NEW LEAD"/>
+
+  <br/>
+    <apex:form >
+  <apex:pageblock >
+      <apex:pageblockSection title="Lead Information" columns="2" >
+ 
+ <apex:outputLabel value="LastName"/>
+ <apex:inputText value="{!LastName}"/>
+ 
+ <apex:outputLabel value="MobilePhone"/>
+ <apex:inputText value="{!MobilePhone}"/>
+ 
+
+   <apex:outputLabel value="Company"/>
+   <apex:inputText value="{!Company}"/>
+    
+<apex:outputLabel value="Status"/>
+ <apex:inputText value="{!Status}"/>
+  
+     
+           </apex:pageblockSection>
+           <apex:pageBlockButtons >
+                <apex:commandButton action="{!Save1}" value="Save" />
+                          </apex:pageBlockButtons>
+
+   </apex:pageblock>
+
+             </apex:form>
+
+  
+
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

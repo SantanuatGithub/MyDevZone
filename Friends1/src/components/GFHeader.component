@@ -1,0 +1,12 @@
+<apex:component >
+<apex:stylesheet value="{!URLFOR($Resource.myStyles, 'myStyles/css/style.css')}"/>
+  <div class="header"> 
+       <div class="logo"><apex:image url="{!URLFOR($Resource.myStyles,'myStyles/images/logo.gif')}" width="259" height="33" alt="Logo" /></div>
+        <div class="headerSearch">
+       <apex:form > <apex:inputText ><apex:image url="{!URLFOR($Resource.myStyles,'myStyles/images/headerSearchBtn.gif')}"/></apex:inputText>   </apex:form>    
+        </div>
+     
+   </div> 
+  
+  
+</apex:component>

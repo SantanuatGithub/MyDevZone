@@ -1,0 +1,7 @@
+<apex:page standardController="Contact">
+<style>
+.fewerMore { display: none;}
+</style>
+<apex:pageMessages />
+ <apex:detail relatedList="true"></apex:detail>
+</apex:page>

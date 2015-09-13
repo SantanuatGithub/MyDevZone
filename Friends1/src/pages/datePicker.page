@@ -1,0 +1,16 @@
+<apex:page controller="MainPageController">
+ 
+    <apex:form >
+        <apex:inputText id="sampleDateField" value="{!sampleDateField}" onfocus="DatePicker.pickDate(true, '{!$Component.sampleDateField}', false);"/>
+        <c:DatePickerComponent dateFieldId="{!$Component.sampleDateField}" />   
+        <br/>
+        <apex:commandButton value="Refresh" reRender="panel" action="{!refresh}"/>
+    </apex:form>
+ 
+    <apex:outputPanel id="panel">
+ 
+            <apex:outputText value="{!sampleDateField}"/>
+ 
+    </apex:outputPanel>    
+ 
+</apex:page>

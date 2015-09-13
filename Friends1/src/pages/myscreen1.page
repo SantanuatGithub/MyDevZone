@@ -1,0 +1,22 @@
+<apex:page >
+<html>
+<head>
+ <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="https://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+ <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+ </style>
+ <script>
+     $(function(){
+         $("#draggable").draggable();
+     
+     });
+     </script>
+     </head>
+     <body>
+     <apex:pageBlock >
+ <div id="draggable" class="ui-widget-content">
+  <p>Drag</p>
+</div></apex:pageBlock></body></html>
+ 
+</apex:page>
