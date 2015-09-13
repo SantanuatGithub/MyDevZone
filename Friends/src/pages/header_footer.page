@@ -1,0 +1,10 @@
+<apex:page >
+    <apex:image url="{!$Resource.GFLogo}" />
+ 
+    <apex:insert name="header"/>
+    
+    <apex:insert name="footer"/>
+ 
+    <apex:image url="{!$Resource.GFLogo}"/>
+ 
+</apex:page>

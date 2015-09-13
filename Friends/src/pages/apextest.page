@@ -1,0 +1,10 @@
+<apex:page showheader="false" sidebar="false">
+<script>
+    window.onload=function fun()
+                    {
+                        alert("hi");
+                        window.location.assign("/800/e?ctrc7=sdf");
+                     }
+                 
+</script>
+</apex:page>

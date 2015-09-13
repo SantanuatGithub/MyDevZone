@@ -1,0 +1,16 @@
+<apex:page >
+<style>
+
+
+
+
+</style>
+                    <div class="headerSearchLeftRoundedCorner">
+                       <div class="searchBoxClearContainer">
+    <input autocomplete="off" id="phSearchInput" maxlength="100" name="str" placeholder="Search..." size="20" title="Search..." type="text" value=""/>
+    <a class="headerSearchClearButton" href="javascript: void(0);" id="phSearchClearButton" name="phSearchClearButton" style="visibility:hidden" 
+        title="Clear search terms">
+    </a>
+</div></div>
+
+                      </apex:page>

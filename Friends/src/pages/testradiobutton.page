@@ -1,0 +1,32 @@
+<apex:page controller="TestRadioButtonController" id="mypage">
+<apex:form id="myform">
+<apex:pageBlock mode="Edit">
+ <apex:pageBlockSection title="Recurrence" collapsible="false" columns="1" id="pgbl1">
+ <!--{!recurrenceCheck}-->
+
+<apex:inputCheckbox value="{!recurrenceCheck}" onclick="callchk()" id="chkId"/>
+    <apex:outputPanel id="pgId" rendered="{!showpanel}">
+        <table>
+            <apex:outputLabel value="Frequency" style="padding:20px 80px"/>
+            <td>
+                <!--<apex:selectRadio value="{!recurrValue}" layout="pageDirection" id="radioid">
+                
+                      <apex:selectOption itemValue="100" itemLabel="Daily" />
+                      <apex:selectOption itemValue="1"   itemLabel="Weekly" />
+                      <apex:selectOption itemValue="2"   itemLabel="Monthly" />
+                      <apex:selectOption itemValue="3"   itemLabel="Yearly" />
+                       <apex:actionSupport event="onclick"  action="{!radioaction}" rerender="pgbl1,pgId,radioid" /> 
+                </apex:selectRadio> -->
+                <input type="radio" value="{!recurrValue}">Daily
+                <apex:actionSupport event="onclick"  action="{!radioaction}" rerender="pgbl1,pgId,radioid" /> 
+                </input>
+            </td>
+      </table>
+  </apex:outputPanel>
+    
+   <apex:actionFunction name="callchk" action="{!action1}" reRender="myform,pgId,radioid"/>
+   <!--<apex:actionFunction name="chk" action="{!radioaction}" reRender="pgId,radioid"/>-->
+     </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>  
+</apex:page>

@@ -1,0 +1,105 @@
+<apex:page sidebar="false" tabStyle="Lead" controller="myDevicesController">
+
+   <apex:stylesheet value="{!URLFOR($Resource.FV2Styles, 'FV2Styles/css/style.css')}"/> 
+   <style>
+       .container{
+        width:auto;
+        height:auto;
+        margin:0 auto;
+        overflow:hidden;
+        border:1px solid #ccc;
+        background: rgb(182,194,194); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(182,194,194,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(182,194,194,1))); /* Chrome,Safari4+ */                         (99,147,193,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(182,194,194,1) 100%); /*       Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(182,194,194,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(182,194,194,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(182,194,194,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#B6C2C2',GradientType=0 ); /* IE6-9 */
+       } 
+       
+       .bodyContentContainer{
+    height:420px;
+    padding:0 20px 50px 20px;
+}
+       
+        .blankbodyContainer{
+            padding:0 20px 10px 10px;
+}
+      
+  .respectiveSecContainer{
+            width:932px;
+            height:auto;
+            background-color:#FFF;
+            height:auto;
+            float:left;
+            clear:right;
+            padding-bottom:10px;
+        }
+
+    
+   
+        
+      
+ .divider {
+border-left:1px solid #16222c;height:400px;position:absolute;right:1025px;top:40px;
+}
+
+
+   </style> 
+
+   <script>
+function search1() {
+            var searchStr1 = document.getElementById('txt1').value + '*';
+            window.open('/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=001&sen=003&sen=006&sen=701&sen=a0G&str=' + encodeURIComponent(searchStr1), "_parent" );
+        }
+        
+        function pressedKey1() {
+            if(event.keyCode==13) {
+                document.getElementById("btnSearch1").focus();
+            }
+        }
+</script>
+
+   <div class="container">
+       <div class="bodyContentContainer">
+           <div class="blankbodyContainer"/>
+           <apex:form id="generalsearch" onsubmit="search1();" onkeypress="pressedKey1();">
+               <input type="text" id="txt1"/>&nbsp;&nbsp;
+               <apex:image value="{!URLFOR($Resource.Search)}" width="30px" height="30px" onclick="search1();"/> 
+           </apex:form>
+           <apex:form >
+                    <div class="bodyContent">
+                        <div class="leftNavContainer">
+                            <h2>My Devices Links</h2>
+                            <ul>
+                                <li><span class="preferences"><apex:commandLink value="My Device Home" onclick="OpenPage('blog'); return false;" id="mydevicehomeLink"/></span></li>
+                                <li><span class="subscription" ><apex:commandLink action="{}" value="Electric Test" id="electrictestLink"/></span></li>
+                                <li><span class="manage"><apex:commandLink action="{}" value="Wafer Inspection" id="waferinspectionLink"/></span></li>
+                                <li><span class="new"><apex:commandLink action="{}" value="Yield ( Sort/Test ) Reporting" id="yieldreportingLink"/></span></li>
+                                <li><span class="nda"><apex:commandLink action="{}" value="CPK" id="cpkLink"/></span></li>
+                                <li><span class="contract"><apex:commandLink action="{}" value="Tester Gauge R & R" id="testerGaugeLink"/></span></li>
+                                <li><span class="Survey"><apex:commandLink action="{}" value="Product Wafer Compliance" id="productLink"/></span></li>
+                            </ul>
+                            <h2>Associated Apps</h2>
+                            <div class="associatedApps" >
+                                <apex:commandLink action="{}" value="WIP Status" id="wipLink"/>
+                                <apex:commandLink action="{}" value="Lot Control Table" id="lotcontrolLink"/>
+                                <apex:commandLink action="{}" value="Process Technology" id="processkLink"/>
+                            </div>
+                        </div>
+                     </div>
+                     <apex:actionFunction action="{!redirect}" name="OpenPage" reRender="pb,theIframe">
+    <apex:param assignTo="{!Page}" value="" name="param1"/>
+</apex:actionFunction>
+         
+         <div class ="divider"/>
+         <div class ="respectiveSecContainer">
+         <apex:pageBlock title="My Device Home" id="pb">
+              <apex:iframe height="300px" id="theIframe" src="{!OpenPageURL}" scrolling="true"  />
+         </apex:pageBlock>
+         </div></apex:form>
+       </div>
+       
+   </div>
+</apex:page>

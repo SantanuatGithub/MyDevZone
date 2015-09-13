@@ -1,0 +1,20 @@
+<apex:page standardController="Taker__c" extensions="TestAction">
+<script>
+    function callid1()
+    {
+        var txtval1 = document.getElementById("{!$Component.myform.pgbl1.lkpId}").value;
+        alert(txtval1);
+        callid(txtval1);
+    }
+</script>
+    <apex:form id="myform">
+        <apex:pageBlock mode="Edit" id="pgbl1">
+            Post<apex:inputField value="{!Taker__c.Post__c}" onchange="callid1();" id="lkpId"/>
+        </apex:pageBlock>
+    
+        <apex:actionFunction name="callid" action="{!CheckTakerId}" reRender="myform">
+            <apex:param name="firstParam" value="" />
+        </apex:actionFunction>
+    </apex:form>
+    
+</apex:page>

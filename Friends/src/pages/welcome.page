@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="ClsCustomizeAccount">
+<apex:pageMessages ></apex:pageMessages>
+<apex:form >
+<apex:pageBlock mode="Edit">
+    <apex:pageBlockSection title="Account Information">
+        <apex:inputField value="{!Account.Name}"/>
+        <apex:inputField value="{!Account.AnnualRevenue}"/>
+        <apex:inputText label="Account Feedback" value="{!feedback}"/>      
+        
+    </apex:pageBlockSection>
+    <apex:pageBlockButtons >
+        <apex:commandButton action="{!AccountSaving}" value="Save"/>
+        <apex:commandButton action="{!Cancel}" value="Cancel"/>      
+    </apex:pageBlockButtons>
+</apex:pageBlock>
+</apex:form>
+ </apex:page>

@@ -1,0 +1,5 @@
+<apex:page standardController="Account" rendered="true">
+    <script type = "text/javascript">
+        window.alert("Hi");
+    </script>
+</apex:page>

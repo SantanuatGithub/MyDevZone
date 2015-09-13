@@ -1,0 +1,19 @@
+<apex:page standardController="Account" >
+    <!--<apex:includeScript value="{!$Resource.jquerymin}"/>-->
+    <!--<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" />-->
+    <apex:includeScript value="https://code.jquery.com/jquery-latest.min.js"/>
+
+    <apex:includeScript value="{!$Resource.BarCode}"/>
+
+    <script>
+    $(document).ready(function(){
+        $("#demo").barcode(
+"{!Account.Id}","code39" );
+});
+    </script>
+  <apex:outputText value="{!Account.AccountNumber}"></apex:outputText>
+  <div id="demo"></div>
+  
+      
+   
+</apex:page>

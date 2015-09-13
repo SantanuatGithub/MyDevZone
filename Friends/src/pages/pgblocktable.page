@@ -1,0 +1,13 @@
+<apex:page controller="testPgBlockTable">
+<apex:form >
+  <apex:pageBlock >
+  
+      <apex:pageBlockSection >
+          <apex:pageBlockTable value="{!rowList }" var="item">
+              <apex:column headervalue="Header1"><apex:inputCheckbox value="{!item.isSelected}"/></apex:column>
+              <apex:column headervalue="Header2">sdasd<!--apex:inputCheckbox value="{!item.isSelected}"/--></apex:column>
+              
+          </apex:pageBlockTable>
+      </apex:pageBlockSection>
+  </apex:pageBlock></apex:form>
+</apex:page>

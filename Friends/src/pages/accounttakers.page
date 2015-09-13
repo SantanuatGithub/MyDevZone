@@ -1,0 +1,13 @@
+<apex:page standardController="Account" extensions="AccountLocker" action="{!onLoad}">
+<apex:pageBlock >
+    <apex:pageBlocksection title="Name Of The Locked Users">
+        <apex:pageblocksectionitem >
+            <apex:pageBlockTable value="{!UserList}"  var="item" id="dtTable" width="100%">
+                 <apex:column headerValue="User Name" id="col1">
+                        <apex:outputText value="{!item.Name}"/>
+                 </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageblocksectionitem>
+    </apex:pageBlocksection>
+</apex:pageBlock>
+  </apex:page>

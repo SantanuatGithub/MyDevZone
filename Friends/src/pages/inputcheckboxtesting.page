@@ -1,0 +1,9 @@
+<apex:page controller="checkboxcontroller">
+<apex:form id="myform">
+<apex:inputCheckbox onclick="callchk('Sunday');"/><label style="position:absolute;margin-left:0px;margin-top:0px;" >Sunday</label> 
+ <apex:actionFunction action="{!checkvalue}" name="callchk" reRender="myform">
+                    <apex:param assignTo="{!day}" value="" name="param1"/>
+                </apex:actionFunction>
+</apex:form>
+
+</apex:page>
